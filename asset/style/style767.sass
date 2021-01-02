@@ -1,0 +1,82 @@
+$default-background: linear-gradient(50deg ,#200122, #6f0000) 
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto
+$primary-color: white
+$secondary-color: #182848
+
+//breakpoints
+$layout_breakpoint_smartphone: 767px
+
+@media(max-width: $layout_breakpoint_smartphone)
+          *
+                    font-family: $font-family-sans-serif
+          body
+                    background-image: $default-background
+                    background-repeat: none
+                    display: flex
+                    justify-content: center
+
+          .container
+                    width: 30vw
+                    height: 90vh
+                    background: $primary-color
+                    margin-top: 2%
+                    border-radius: 15px
+                    box-shadow:  10px 5px  30px  0  rgba(0, 0, 0, .25)
+                    position: relative
+
+          .top_section
+                    width: 100%
+                    height: 45%
+                    background: $secondary-color
+                    border-radius: 14px
+                    position: relative
+
+          .value_screen
+                    width: 100%
+                    height: 40%
+                    background: $primary-color
+                    border-radius: 14px
+                    box-shadow: inset 0px 3px  20px  0  rgba(0, 0, 0, .25)
+
+          .progress_container
+                    width: 100%
+                    height: 60%
+                    background: $secondary-color
+                    border-bottom-left-radius: 14px
+                    border-bottom-right-radius: 14px
+                    box-shadow: 0px 5px  30px  0  rgba(0, 0, 0, .25)
+
+          .middle_section
+                    width: 100%
+                    height: 45%
+                    border-bottom: 1px solid $secondary-color
+                    border-bottom-right-radius: 14px
+                    border-bottom-left-radius: 14px
+                    position: relative
+                    box-shadow: 0px 5px  20px  0  rgba(0, 0, 0, .25)
+                    
+          .power_model
+                    width: 90%
+                    height: 20%
+                    position: relative
+                    margin: 12px
+                    background: $primary-color
+                    border-radius: 14px
+                    box-shadow: 0px 2px  20px  0  rgba(0, 0, 0, .25)
+                    transition: transform 300ms, box-shadow 300ms
+
+          .power_model:hover
+                    transform: scale(1.1)
+                    box-shadow: 0px 4px  30px  0  rgba(0, 0, 0, .25)
+
+          .gadget_model
+                    @extend .power_model
+
+          .gadget_model:hover
+                    @extend .power_model:hover
+
+          .model_selection_reference
+                    @extend .power_model
+
+          .model_selection_reference:hover
+                    @extend .power_model:hover
